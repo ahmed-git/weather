@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <div class="container my-3">
+        <div class="input-group input-group-lg">
+            <input id="cityInput" type="text" class="form-control bg-dark text-muted" placeholder="Enter city,country"
+                aria-label="city" aria-describedby="sendButton">
+            <div class="input-group-append">
+                <button class="btn btn-lg btn-primary" type="button" id="sendButton">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container rounded bg-dark py-3">
+        <div class="row justify-content-around">
+            <!-- Today-->
+            <div class="col-xl-4 col-12 py-3">
+                <div class="row ">
+                    <div class="col-auto">
+                        <h4 id="day"></h4>
+                    </div>
+                    <div class="col-auto ml-auto">
+                        <h4 id="month"></h4>
+                    </div>
+                </div>
+                <div class="row py-3">
+                    <div class="col-auto">
+                        <h4 id="city"></h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-auto">
+                        <h3 class="display-3 font-weight-bold text-white"><span id="temperature"></span><sup>o</sup>C
+                        </h3>
+                    </div>
+                    <div class="col-auto my-auto">
+                        <img class="img-fluid" src="" id="weatherImage" alt="" width=90>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-auto">
+                        <img class="px-1" src="assets/images/icon-umberella.png" alt=""><span
+                            id="humidity"></span><span>%</span>
+                    </div>
+                    <div class="col-auto">
+                        <img class="px-1" src="assets/images/icon-wind.png" alt=""><span id="wind"></span><span>km/h</span>
+                    </div>
+                    <div class="col-auto">
+                        <img class="px-1" src="assets/images/icon-compass.png" alt=""><span class="text-capitalize"
+                            id="compass"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- 2nd day -->
+            <div class="col-xl-8 col-12 py-3">
+                <div class="row no-gutters">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col text-center">
+                                <h4 id="day2"></h4>
+                            </div>
+                        </div>
+                        <div class="row py-3">
+                            <div class="col text-center">
+                                <img src="" id="day2WeatherImage" alt="" width=48 height=48>
+                            </div>
+                        </div>
+                        <div class="row py-3">
+                            <div class="col text-center">
+                                <h5 class="display-5 font-weight-bold text-white"><span
+                                        id="day2MaxTemp"></span><sup>o</sup>C
+                                </h5>
+                                <h6 class="display-6 text-white"><span id="day2MinTemp"></span><sup>o</sup>C
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3rd day -->
+                    <div class="col">
+                        <div class="row">
+                            <div class="col text-center">
+                                <h4 id="day3"></h4>
+                            </div>
+                        </div>
+                        <div class="row py-3">
+                            <div class="col text-center">
+                                <img src="" id="day3WeatherImage" alt="" width=48 height=48>
+                            </div>
+                        </div>
+                        <div class="row py-3">
+                            <div class="col text-center">
+                                <h5 class="display-5 font-weight-bold text-white"><span
+                                        id="day3MaxTemp"></span><sup>o</sup>C
+                                </h5>
+                                <h6 class="display-6 text-white"><span id="day3MinTemp"></span><sup>o</sup>C
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4th day -->
+                    <div class="col">
+                        <div class="row">
+                            <div class="col text-center">
+                                <h4 id="day4"></h4>
+                            </div>
+                        </div>
+                        <div class="row py-3">
+                            <div class="col text-center">
+                                <img src="" id="day4WeatherImage" alt="" width=48 height=48>
+                            </div>
+                        </div>
+                        <div class="row py-3">
+                            <div class="col text-center">
+                                <h5 class="display-5 font-weight-bold text-white"><span
+                                        id="day4MaxTemp"></span><sup>o</sup>C
+                                </h5>
+                                <h6 class="display-6 text-white"><span id="day4MinTemp"></span><sup>o</sup>C
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5th day -->
+                    <div class="col">
+                        <div class="row">
+                            <div class="col text-center">
+                                <h4 id="day5"></h4>
+                            </div>
+                        </div>
+                        <div class="row py-3">
+                            <div class="col text-center">
+                                <img src="" id="day5WeatherImage" alt="" width=48 height=48>
+                            </div>
+                        </div>
+                        <div class="row py-3">
+                            <div class="col text-center">
+                                <h5 class="display-5 font-weight-bold text-white"><span
+                                        id="day5MaxTemp"></span><sup>o</sup>C
+                                </h5>
+                                <h6 class="display-6 text-white"><span id="day5MinTemp"></span><sup>o</sup>C
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6th day -->
+                    <div class="col">
+                        <div class="row">
+                            <div class="col text-center">
+                                <h4 id="day6"></h4>
+                            </div>
+                        </div>
+                        <div class="row py-3">
+                            <div class="col text-center">
+                                <img src="" id="day6WeatherImage" alt="" width=48 height=48>
+                            </div>
+                        </div>
+                        <div class="row py-3">
+                            <div class="col text-center">
+                                <h5 class="display-5 font-weight-bold text-white"><span
+                                        id="day6MaxTemp"></span><sup>o</sup>C
+                                </h5>
+                                <h6 class="display-6 text-white"><span id="day6MinTemp"></span><sup>o</sup>C
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7th day -->
+                    <div class="col">
+                        <div class="row">
+                            <div class="col text-center">
+                                <h4 id="day7"></h4>
+                            </div>
+                        </div>
+                        <div class="row py-3">
+                            <div class="col text-center">
+                                <img src="" id="day7WeatherImage" alt="" width=48 height=48>
+                            </div>
+                        </div>
+                        <div class="row py-3">
+                            <div class="col text-center">
+                                <h5 class="display-5 font-weight-bold text-white"><span
+                                        id="day7MaxTemp"></span><sup>o</sup>C
+                                </h5>
+                                <h6 class="display-6 text-white"><span id="day7MinTemp"></span><sup>o</sup>C
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script> -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/weather.js"></script>
+</body>
+
+</html>
