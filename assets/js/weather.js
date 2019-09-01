@@ -1,6 +1,5 @@
 
-const appKey = "08395cda90b14fc7ba471ce0020c4707";// key for weather bit API
-const googlePlacesKey = "AIzaSyCsjunTSdmHC-6tKCcmL671gzJ3A1tAmQU";
+const appKey = "key";// key for weather bit API
 const weekDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Juin", "July", "Aug", "Sep", "Oct", "Nov", "Dec"]
 let sendButton = document.getElementById("sendButton");
